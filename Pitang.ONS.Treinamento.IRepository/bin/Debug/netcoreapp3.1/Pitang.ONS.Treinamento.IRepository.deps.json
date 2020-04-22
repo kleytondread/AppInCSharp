@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Pitang.ONS.Treinamento.IRepository/1.0.0": {
+        "dependencies": {
+          "Pitang.ONS.Treinamento.Entities": "1.0.0"
+        },
+        "runtime": {
+          "Pitang.ONS.Treinamento.IRepository.dll": {}
+        }
+      },
+      "Pitang.ONS.Treinamento.Entities/1.0.0": {
+        "runtime": {
+          "Pitang.ONS.Treinamento.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pitang.ONS.Treinamento.IRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pitang.ONS.Treinamento.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Services.csprojAssemblyReference.cache
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Services.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Services.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Services.AssemblyInfo.cs
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.MessageApp.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Utils.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Utils.pdb

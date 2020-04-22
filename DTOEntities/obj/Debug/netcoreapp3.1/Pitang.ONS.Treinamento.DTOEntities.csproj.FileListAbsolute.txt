@@ -1,0 +1,5 @@
+C:\Users\Pichau\Desktop\Rewrite\DTOEntities\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.deps.json
+C:\Users\Pichau\Desktop\Rewrite\DTOEntities\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.dll
+C:\Users\Pichau\Desktop\Rewrite\DTOEntities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.csprojAssemblyReference.cache
+C:\Users\Pichau\Desktop\Rewrite\DTOEntities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\Rewrite\DTOEntities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.AssemblyInfo.cs

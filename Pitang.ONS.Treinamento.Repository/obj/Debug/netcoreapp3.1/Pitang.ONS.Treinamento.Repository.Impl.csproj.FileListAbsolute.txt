@@ -1,0 +1,13 @@
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.deps.json
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.csprojAssemblyReference.cache
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.AssemblyInfo.cs
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.csproj.CopyComplete
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.dll
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Repository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.pdb

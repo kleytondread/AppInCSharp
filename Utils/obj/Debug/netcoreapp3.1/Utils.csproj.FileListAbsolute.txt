@@ -1,0 +1,11 @@
+C:\Users\Pichau\Desktop\Rewrite\Utils\bin\Debug\netcoreapp3.1\Utils.deps.json
+C:\Users\Pichau\Desktop\Rewrite\Utils\bin\Debug\netcoreapp3.1\Utils.dll
+C:\Users\Pichau\Desktop\Rewrite\Utils\bin\Debug\netcoreapp3.1\Utils.pdb
+C:\Users\Pichau\Desktop\Rewrite\Utils\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.dll
+C:\Users\Pichau\Desktop\Rewrite\Utils\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.pdb
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.csprojAssemblyReference.cache
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo.cs
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.CopyComplete
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.dll
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.pdb
