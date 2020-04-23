@@ -4,12 +4,20 @@ using Pitang.ONS.Treinamento.Entities;
 using System.Collections.Generic;
 using Pitang.ONS.Treinamento.IService;
 using System.Threading.Tasks;
+using Pitang.ONS.Treinamento.IRepository;
+using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.InteropServices;
 
 namespace Pitang.ONS.Treinamento.Services
 {
 	public class UserService : IUserService
     {
-        private UserRepository userRepository;
+        private IUserRepository userRepository;
+        public UserService(IUserRepository userRepository)
+        {
+            this.userRepository = userRepository;
+        }
 
 		private void checkIntegrity(UserModel user)
 		{
@@ -43,11 +51,11 @@ namespace Pitang.ONS.Treinamento.Services
 
 		private void validateUser(UserModel user)
 		{
-			if (!string.IsNullOrWhiteSpace(user.UserName) && userRepository.findByUserName(user.UserName) != null)
+			if (!string.IsNullOrWhiteSpace(user.UserName) && userRepository.FindByUserName(user.UserName) != null)
 			{
 				throw new ExceptionConflict("Nome de usuário informado já existe!");
 			}
-			if (!string.IsNullOrWhiteSpace(user.Email) && userRepository.findByEmail(user.Email) != null)
+			if (!string.IsNullOrWhiteSpace(user.Email) && userRepository.FindByEmail(user.Email) != null)
 			{
 				throw new ExceptionConflict("Email informado já existe!");
 			}
@@ -81,66 +89,52 @@ namespace Pitang.ONS.Treinamento.Services
         }
 
 
-        public async Task<List<UserModel>> listUsers()
+        public async Task<List<UserModel>> ListUsers()
         {
-            if (userRepository.Users.Count == 0 || userRepository.Users == null)
+            if (userRepository.FindAll().Count() == 0|| userRepository.FindAll() == null)
             {
                 return null;
             }
-            return userRepository.Users;
+            return await Task.FromResult(userRepository.FindAll().ToList()); //ta correto? se sim, fazer no resto
         }
 
-        public UserModel findUserById(long id)
+        public async Task<UserModel> FindUserById(long id)
         {
-            return userRepository.findById(id);
+            //meu findBy já retornava uma lista, mas aqui eu preciso converter pra lista de novo?
+            return await userRepository.FindByIdAsync(id);
         }
 
-        public UserModel findUserByUsername(string userName)
+        public async Task<UserModel> FindUserByUsername(string userName)
         {
-            return userRepository.findByUserName(userName);
+            return await Task.FromResult(userRepository.FindByUserName(userName));
         }
 
-        public UserModel findUserByEmail(string email)
+        public async Task<UserModel> FindUserByEmail(string email)
         {
-            return userRepository.findByEmail(email);
+            return await Task.FromResult(userRepository.FindByEmail(email));
         }
 
-        public UserModel addUser(UserModel user)
+        public async Task<UserModel> AddUser(UserModel user)
         {
             validateUser(user);
             checkIntegrity(user);
-            return userRepository.save(user);
+            return await userRepository.AddAsync(user);
         }
 
-        //no spring se um obj tinha um id que já contava no BD, ele sobre escrevia a entidade no banco, o mesmo serve aqui?
-        public UserModel updateUser(UserModel user) 
+        public UserModel UpdateUser(UserModel user) 
         {
-            if (user.Id == null)
-            {
-                throw new ExceptionBadRequest("Necessário informar o id para atualizar!");
-            }
             checkIntegrity(user);
             //validateUser(user);
-            return userRepository.save(user);
+            return userRepository.Updade(user);
         }
 
-        public void deleteUser(long id)
+        public void DeleteUser(long id)
         {
-            Optional<UserModel> user = userRepository.findById(id);
-            if (user.isPresent())
+           var user = FindUserById(id);
+            if (user != null)
             {
-                userRepository.deleteById(id);
+                userRepository.Delete(id);
             }
-        }
-
-        public void deleteUser(long id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void deleteById(long id)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

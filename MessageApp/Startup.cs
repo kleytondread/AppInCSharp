@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,6 +30,8 @@ namespace Pitang.ONS.Treinamento.MessageApp
         {
             services.AddControllers();
             services.AddAutoMapper(typeof(MappingProfile)); //classe com os mapeamentos
+            //"DataContext é a classwe que eu criar"
+           // services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.ONS.Treinamento.MessageApp")));
 
             //services.AddScoped<inteface, classe> 
             //fazer isso pra todas as interfaces

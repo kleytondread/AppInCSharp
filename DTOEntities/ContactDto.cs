@@ -16,7 +16,6 @@ namespace Pitang.ONS.Treinamento.DTOEntities
         public string Telephone2 { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
-        public long UserModelId { get; set; }
-        public UserDto UserModel { get; set; }
+        public int UserId { get; set; }
     }
 }

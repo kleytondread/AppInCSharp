@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Pitang.ONS.Treinamento.Entities
 {
-    public class Contact
+    public class Contact : AuditEntity
     {
-        [Key]
-        public long Id { get; set; }
+        //[Key]
+        //public long Id { get; set; }
 
         [Required(ErrorMessage = "Please, type a username")]
         [MinLength(3, ErrorMessage = "The username needs at least 3 characters to be valid")]
@@ -46,8 +46,6 @@ namespace Pitang.ONS.Treinamento.Entities
         [MinLength(3, ErrorMessage = "Your city needs at least 3 characters to be valid")]
         [MaxLength(64, ErrorMessage = "Your address is to long, maximum number of characters is 64")]
         public string City { get; set; }
-
-        public long UserModelId { get; set; }
-        public UserModel UserModel { get; set; }
+        public int UserId { get; set; }
     }
 }

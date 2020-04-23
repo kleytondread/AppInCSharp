@@ -14,3 +14,4 @@ C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcor
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.pdb
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Repository.Impl.pdb
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Utils.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.Services\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.DTOEntities.pdb

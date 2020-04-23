@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Pitang.ONS.Treinamento.Entities
 {
-    public class Message
+    public class Message : AuditEntity
     {
-        [Key]
-        public long Id { get; set; }
+       // [Key]
+       // public long Id { get; set; }
 
         [Required]
         public string Text { get; set; }

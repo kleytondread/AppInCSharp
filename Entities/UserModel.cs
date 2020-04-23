@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Pitang.ONS.Treinamento.Entities
 {
-    public class UserModel
+    public class UserModel : AuditEntity
     {
-        [Key]
-        public long Id { get; set; }
+        //[Key]
+        //public long Id { get; set; }
 
         [Required(ErrorMessage = "Please, type a username")]
         [MinLength(3, ErrorMessage = "The username needs at least 3 characters to be valid")]

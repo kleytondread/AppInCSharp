@@ -1,35 +1,34 @@
 ﻿using Pitang.ONS.Treinamento.Entities;
 using Pitang.ONS.Treinamento.IRepository;
+using Pitang.ONS.Treinamento.IRepository.EFRepository;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace Pitang.ONS.Treinamento.Repository
+namespace Pitang.ONS.Treinamento.Repository.Impl
 {
-
-    //eu preciso criar uma instancia aqui?
-    public class UserRepository : IUserRepository
+    public class UserRepository : Repository<UserModel>, IUserRepository
     {
-        public List<UserModel> Users { get; set; }
-
-        public UserModel findByEmail(string email)
+        public UserRepository(DatabaseContext dbContext) : base(dbContext)
         {
-            throw new NotImplementedException();
+
         }
 
-        public UserModel findById(long id)
+        public UserModel FindByEmail(string email)
         {
-            throw new NotImplementedException();
+            var query = _entities.AsQueryable();
+            query.Select(e => e.Email.Contains(email));
+
+            return query.ToList()[0];
         }
 
-        public UserModel findByUserName(string userName)
+        public UserModel FindByUserName(string username)
         {
-            throw new NotImplementedException();
-        }
+            var query = _entities.AsQueryable();
+            query.Select(e => e.UserName.Contains(username));
 
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
+            return query.ToList()[0];
         }
     }
 }

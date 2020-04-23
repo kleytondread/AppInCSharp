@@ -3,25 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Pitang.ONS.Treinamento.IService
 {
-    public interface IUserService
-    {
-		public List<UserModel> listUsers();
+	public interface IUserService
+	{
+		Task<List<UserModel>> ListUsers();
 
-		public UserModel findUserById(long id);
+		Task<UserModel> FindUserById(long id);
 
-		public UserModel findUserByUsername(String userName);
+		Task<UserModel> FindUserByUsername(String userName);
 
-		public UserModel findUserByEmail(String email);
+		Task<UserModel> FindUserByEmail(String email);
 
-		public UserModel addUser(UserModel user);
+		Task<UserModel> AddUser(UserModel user);
 
-		public UserModel updateUser(UserModel user);
+		UserModel UpdateUser(UserModel user);
 
-		public void deleteUser(long id);
-
-		public void deleteById(long id);
+		public void DeleteUser(long id);
 	}
 }

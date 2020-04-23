@@ -5,10 +5,9 @@ using System.Text;
 
 namespace Pitang.ONS.Treinamento.IRepository
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<UserModel>
     {
-        public UserModel findById(long id);
-        public UserModel findByUserName(string userName);
-        public UserModel findByEmail(string email);
+        UserModel FindByUserName(string username);
+        UserModel FindByEmail(string email);
     }
 }

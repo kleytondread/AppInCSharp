@@ -26,9 +26,9 @@ namespace Pitang.ONS.Treinamento.MessageApp.Controllers
 
         [HttpGet]
         [Route ("")]
-        public ActionResult<List<UserDto>> ListUsers() //usar 'async Task<>' / 'await'
+        public async Task<ActionResult<List<UserDto>>> ListUsers() //usar 'async Task<>' / 'await'
         {
-            List<UserModel> usersModel = userService.listUsers();
+            List<UserModel> usersModel = await userService.ListUsers();
             if(usersModel.Count == 0)
                 return NotFound(null);
 
@@ -39,14 +39,14 @@ namespace Pitang.ONS.Treinamento.MessageApp.Controllers
 
         [HttpPost]
         [Route ("")]
-        public ActionResult<UserDto> AddUser(UserDto userDto)
+        public async Task<ActionResult<UserDto>> AddUser(UserDto userDto)
         {
             if(userDto == null)
             {
                 return NotFound("No user to add");
             }
             UserModel user = mapper.Map<UserDto, UserModel>(userDto);
-            userService.addUser(user);
+            await userService.AddUser(user);
             userDto = mapper.Map<UserModel, UserDto>(user);
 
             return Ok(userDto);
@@ -59,7 +59,7 @@ namespace Pitang.ONS.Treinamento.MessageApp.Controllers
             if(userDto == null) { return NotFound("Nothing to update"); }
             userDto.Id = id;
             UserModel user = mapper.Map<UserDto, UserModel>(userDto);
-            userService.updateUser(user);
+            userService.UpdateUser(user);
             userDto = mapper.Map<UserModel, UserDto>(user);
 
             return Ok(userDto);
@@ -67,9 +67,9 @@ namespace Pitang.ONS.Treinamento.MessageApp.Controllers
 
         [HttpGet]
         [Route ("FindUserName/{UserName}")]
-        public ActionResult<UserDto> FindByUserName(string UserName)
+        public async Task<ActionResult<UserDto>> FindByUserName(string UserName)
         {
-            UserModel user = userService.findUserByUsername(UserName);
+            UserModel user = await userService.FindUserByUsername(UserName);
             UserDto userDto = mapper.Map<UserModel, UserDto>(user);
 
             return Ok(userDto);
