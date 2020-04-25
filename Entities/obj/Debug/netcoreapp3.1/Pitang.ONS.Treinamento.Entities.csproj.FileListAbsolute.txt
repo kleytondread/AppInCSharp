@@ -6,3 +6,4 @@ C:\Users\Pichau\Desktop\Rewrite\Entities\obj\Debug\netcoreapp3.1\Pitang.ONS.Trei
 C:\Users\Pichau\Desktop\Rewrite\Entities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.AssemblyInfo.cs
 C:\Users\Pichau\Desktop\Rewrite\Entities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.dll
 C:\Users\Pichau\Desktop\Rewrite\Entities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.pdb
+C:\Users\Pichau\Desktop\Rewrite\Entities\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Entities.csproj.CoreCompileInputs.cache

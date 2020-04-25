@@ -31,7 +31,12 @@ namespace Pitang.ONS.Treinamento.Repository.Impl
 
         public Task<T> AddAsync(T entity)
         {
-           _entities.Add(entity);
+            //tá dando erro no 'return'
+            //var newEntity = _entities.AddAsync(entity).AsTask();
+            //_context.SaveChanges();
+            //return newEntity;
+
+            _entities.AddAsync(entity);
             _context.SaveChanges();
             return Task.FromResult(_entities.Find(entity.Id));
         }

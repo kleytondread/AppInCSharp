@@ -11,3 +11,4 @@ C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IService\obj\Debug\netcor
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IService\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.csproj.CopyComplete
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IService\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.dll
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IService\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IService\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IService.csproj.CoreCompileInputs.cache

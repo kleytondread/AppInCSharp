@@ -9,3 +9,4 @@ C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IRepository\obj\Debug\net
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IRepository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.csproj.CopyComplete
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IRepository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.dll
 C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IRepository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.pdb
+C:\Users\Pichau\Desktop\Rewrite\Pitang.ONS.Treinamento.IRepository\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.IRepository.csproj.CoreCompileInputs.cache

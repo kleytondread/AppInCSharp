@@ -16,6 +16,7 @@ namespace Pitang.ONS.Treinamento.DTOEntities
         public string Address { get; set; }
         public string City { get; set; }
         public List<ContactDto> Contacts { get; set; }
+        public List<MessageDto> Messages { get; set; }
         public string ImageUrl { get; set; }
     }
 }

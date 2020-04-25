@@ -9,3 +9,4 @@ C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo
 C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.CopyComplete
 C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.dll
 C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.pdb
+C:\Users\Pichau\Desktop\Rewrite\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.CoreCompileInputs.cache

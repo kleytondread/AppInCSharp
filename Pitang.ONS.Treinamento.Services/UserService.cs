@@ -14,7 +14,7 @@ namespace Pitang.ONS.Treinamento.Services
 	public class UserService : IUserService
     {
         private IUserRepository userRepository;
-        public UserService(IUserRepository userRepository)
+        public UserService(IRepository<UserModel> userRepository)
         {
             this.userRepository = userRepository;
         }
@@ -130,8 +130,7 @@ namespace Pitang.ONS.Treinamento.Services
 
         public void DeleteUser(long id)
         {
-           var user = FindUserById(id);
-            if (user != null)
+            if (FindUserById(id) != null)
             {
                 userRepository.Delete(id);
             }

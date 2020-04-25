@@ -11,7 +11,6 @@ namespace Pitang.ONS.Treinamento.Entities
         [Required(ErrorMessage = "Please, type a username")]
         [MinLength(3, ErrorMessage = "The username needs at least 3 characters to be valid")]
         [MaxLength(32, ErrorMessage = "the username is to long, maximum number of characters is 32")]
-        [Display(Name = "Username")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please type your first name")]
@@ -51,7 +50,8 @@ namespace Pitang.ONS.Treinamento.Entities
         [MaxLength(64, ErrorMessage = "Your address is to long, maximum number of characters is 64")]
         public string City { get; set; }
 
-        public List<Contact> Contacts { get; set; }
+        //public List<Contact> Contacts { get; set; }
+        //public List<Message> Messages { get; set; }
         public string ImageUrl { get; set; }
 
     }

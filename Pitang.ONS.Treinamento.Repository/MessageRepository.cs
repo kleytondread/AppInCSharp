@@ -1,30 +1,16 @@
 ﻿using Pitang.ONS.Treinamento.Entities;
 using Pitang.ONS.Treinamento.IRepository;
+using Pitang.ONS.Treinamento.IRepository.EFRepository;
 using System;
 using System.Collections.Generic;
 
 namespace Pitang.ONS.Treinamento.Repository.Impl
 {
-    public class MessageRepository : IMessageRepository
+    public class MessageRepository : Repository<Message>, IMessageRepository
     {
-        public Message findById(long id)
+        public MessageRepository(DatabaseContext dbContext) : base(dbContext)
         {
-            throw new NotImplementedException();
-        }
 
-        public List<Message> findByRecipient(UserModel recipient)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Message> findBySender(UserModel sender)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Message> findBySenderRecipient(UserModel sender, UserModel recipient)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -12,7 +12,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Pitang.ONS.Treinamento.IRepository;
+using Pitang.ONS.Treinamento.IRepository.EFRepository;
+using Pitang.ONS.Treinamento.IService;
 using Pitang.ONS.Treinamento.MessageApp.Mapper;
+using Pitang.ONS.Treinamento.Repository.Impl;
 
 namespace Pitang.ONS.Treinamento.MessageApp
 {
@@ -30,10 +34,11 @@ namespace Pitang.ONS.Treinamento.MessageApp
         {
             services.AddControllers();
             services.AddAutoMapper(typeof(MappingProfile)); //classe com os mapeamentos
-            //"DataContext é a classwe que eu criar"
-           // services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.ONS.Treinamento.MessageApp")));
-
-            //services.AddScoped<inteface, classe> 
+            
+            services.AddDbContext<DatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.ONS.Treinamento.MessageApp")));
+            //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            //services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            //services.AddScoped(typeof(IUserService), typeof(UserService));
             //fazer isso pra todas as interfaces
         }
 

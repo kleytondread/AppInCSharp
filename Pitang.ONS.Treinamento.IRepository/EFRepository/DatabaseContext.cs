@@ -41,10 +41,10 @@ namespace Pitang.ONS.Treinamento.IRepository.EFRepository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<UserModel>()
-                .HasMany(e => e.Contacts)
-                .WithOne()
-                .HasForeignKey(e => e.UserId);
+            //modelBuilder.Entity<UserModel>()
+            //    .HasMany(e => e.Contacts)
+            //    .WithOne()
+            //    .HasForeignKey(e => e.UserId);
 
             modelBuilder.Entity<UserModel>()
                 .HasIndex(e => e.UserName)
@@ -53,6 +53,34 @@ namespace Pitang.ONS.Treinamento.IRepository.EFRepository
             modelBuilder.Entity<UserModel>()
                 .HasIndex(e => e.Email)
                     .IsUnique();
+
+            //me dá referência circular
+            //    modelBuilder.Entity<UserModel>().HasMany(e => e.Messages).WithOne(e=>e.Sender).HasForeignKey(e => e.SenderId).OnDelete(DeleteBehavior.Cascade);
+            //    modelBuilder.Entity<UserModel>().HasMany(e => e.Messages).WithOne().HasForeignKey(e => e.RecipientId).OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Message>()
+                .HasOne(e => e.Sender)
+                .WithMany()
+                .HasForeignKey(e=>e.SenderId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+             modelBuilder.Entity<Message>()
+                .HasOne(e => e.Recipient)
+                .WithMany()
+                .HasForeignKey(e => e.RecipientId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Contact>()
+                .HasOne(e => e.Owner)
+                .WithMany()
+                .HasForeignKey(e => e.OwnerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Contact>()
+                .HasOne(e => e.ContactUser)
+                .WithMany()
+                .HasForeignKey(e => e.ContactUserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         public void Audit()

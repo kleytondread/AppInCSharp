@@ -5,9 +5,7 @@ using System.Text;
 
 namespace Pitang.ONS.Treinamento.IRepository
 {
-    public interface IContactRepository
+    public interface IContactRepository : IRepository<Contact>
     {
-        public Contact findById(long id);
-        public Contact findByUserName(string userName);
     }
 }
