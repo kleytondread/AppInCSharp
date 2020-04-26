@@ -12,7 +12,8 @@ namespace Pitang.ONS.Treinamento.IRepository.EFRepository
         public DbSet<UserModel> Users { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        
+
+
         public DatabaseContext(DbContextOptions<DatabaseContext> dbContext) : base(dbContext)
         {
                 
