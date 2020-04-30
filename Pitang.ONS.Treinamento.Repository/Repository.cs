@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Pitang.ONS.Treinamento.Repository.Impl
 {
-    public class Repository<T> : IRepository<T> where T : BaseEntity, new()
+    public abstract class Repository<T> : IRepository<T> where T : BaseEntity, new()
     {
         protected readonly DatabaseContext _context;
         protected readonly DbSet<T> _entities;
@@ -24,35 +24,26 @@ namespace Pitang.ONS.Treinamento.Repository.Impl
         public T Add(T entity)
         {
             _entities.Add(entity);
-            _context.SaveChanges();
-
-            return _entities.Find(entity.Id);
+            return entity;
         }
 
-        public Task<T> AddAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
-            //tá dando erro no 'return'
-            //var newEntity = _entities.AddAsync(entity).AsTask();
-            //_context.SaveChanges();
-            //return newEntity;
-
-            _entities.AddAsync(entity);
-            _context.SaveChanges();
-            return Task.FromResult(_entities.Find(entity.Id));
+            await _entities.AddAsync(entity);
+            return entity;
         }
 
-        public void Delete(long id)
+        public T Delete(long id)
         {
-            var entityToBeDeleted = FindBy(e => e.Id == id).ToList()[0];
-            //talvez uma validação?
-            _entities.Remove(entityToBeDeleted);
-            _context.SaveChanges();
+            var entityToBeDeleted = _entities.AsQueryable().SingleOrDefault(e => e.Id == id);
+            entityToBeDeleted.IsDeleted = true;
+            return entityToBeDeleted;
         }
 
         public IEnumerable<T> FindAll()
         {
             var query = _entities.AsQueryable();
-            query.Select(e => e);
+            query = query.Select(e => e);
 
             return query.ToList();
         }
@@ -60,7 +51,7 @@ namespace Pitang.ONS.Treinamento.Repository.Impl
         public async Task<IEnumerable<T>> FindAllAsync()
         {
             var query = _entities.AsQueryable();
-            query.Select(e => e);
+            query = query.Select(e => e);
             
             return await query.ToListAsync();
         }
@@ -68,14 +59,14 @@ namespace Pitang.ONS.Treinamento.Repository.Impl
         public IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)
         {
             var query = _entities.AsQueryable();
-            query.Where(predicate);
+            query = query.Where(predicate);
 
             return query.ToList();
         }
         public async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate)
         {
             var query = _entities.AsQueryable();
-            query.Where(predicate);
+            query = query.Where(predicate);
 
             return await query.ToListAsync();
         }
@@ -90,17 +81,18 @@ namespace Pitang.ONS.Treinamento.Repository.Impl
             return await _entities.FindAsync(id); ;
         }
 
-        public void UnDelete(long id)
+        public T UnDelete(long id)
         {
-            //será que o isDeleted teria que tá no baseEntity, ou eu devia usar o auditEntity aqui?
+            var entityToBeDeleted = _entities.AsQueryable().SingleOrDefault(e => e.Id == id);
+            entityToBeDeleted.IsDeleted = false;
+            return entityToBeDeleted;
         }
 
         public T Updade(T entity)
         {
-            _entities.Update(entity);
-            _context.SaveChanges();
-
-            return _entities.Find(entity.Id);
+            _entities.Attach(entity).State = EntityState.Modified;
+           
+            return entity;
         }
     }
 }

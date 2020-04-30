@@ -15,20 +15,16 @@ namespace Pitang.ONS.Treinamento.Repository.Impl
 
         }
 
-        public UserModel FindByEmail(string email)
+        public bool IsEmailPresent(string email)
         {
-            var query = _entities.AsQueryable();
-            query.Select(e => e.Email.Contains(email));
-
-            return query.ToList()[0];
+            var user = _entities.Any(e => e.Email == email);
+            return user;
         }
 
-        public UserModel FindByUserName(string username)
+        public bool IsUserNamePresent(string username)
         {
-            var query = _entities.AsQueryable();
-            query.Select(e => e.UserName.Contains(username));
-
-            return query.ToList()[0];
+            var user = _entities.Any(e=> e.UserName == username);
+            return user;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Pitang.ONS.Treinamento.IRepository
         IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
         Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate);
         T Updade(T entity);
-        void Delete(long id);
-        void UnDelete(long id);
+        T Delete(long id);
+        T UnDelete(long id);
     }
 }

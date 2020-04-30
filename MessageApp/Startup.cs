@@ -17,6 +17,7 @@ using Pitang.ONS.Treinamento.IRepository.EFRepository;
 using Pitang.ONS.Treinamento.IService;
 using Pitang.ONS.Treinamento.MessageApp.Mapper;
 using Pitang.ONS.Treinamento.Repository.Impl;
+using Pitang.ONS.Treinamento.Services;
 
 namespace Pitang.ONS.Treinamento.MessageApp
 {
@@ -35,11 +36,13 @@ namespace Pitang.ONS.Treinamento.MessageApp
             services.AddControllers();
             services.AddAutoMapper(typeof(MappingProfile)); //classe com os mapeamentos
             
+            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped(typeof(IUserService), typeof(UserService));
+            
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddDbContext<DatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.ONS.Treinamento.MessageApp")));
-            //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            //services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
-            //services.AddScoped(typeof(IUserService), typeof(UserService));
-            //fazer isso pra todas as interfaces
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

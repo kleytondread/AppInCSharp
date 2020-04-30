@@ -7,7 +7,7 @@ namespace Pitang.ONS.Treinamento.IRepository
 {
     public interface IUserRepository : IRepository<UserModel>
     {
-        UserModel FindByUserName(string username);
-        UserModel FindByEmail(string email);
+        bool IsUserNamePresent(string username);
+        bool IsEmailPresent(string email);
     }
 }

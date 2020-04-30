@@ -12,8 +12,11 @@ namespace Pitang.ONS.Treinamento.MessageApp.Mapper
     {
         public MappingProfile()
         {
-            CreateMap<UserModel, UserDto>();
-            CreateMap<UserDto, UserModel>();
+            CreateMap<UserModel, UserDtoInput>();
+            CreateMap<UserDtoInput, UserModel>();
+
+            CreateMap<UserModel, UserDtoOutput>();
+            CreateMap<UserDtoOutput, UserModel>();
 
             CreateMap<Message, MessageDto>();
             CreateMap<MessageDto, Message>();

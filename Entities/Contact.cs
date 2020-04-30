@@ -15,13 +15,13 @@ namespace Pitang.ONS.Treinamento.Entities
         [MaxLength(64, ErrorMessage = "the username is to long, maximum number of characters is 64")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatório")]
+        [Required(ErrorMessage = "The OwnerId is mandatory")]
         public long OwnerId { get; set; }
-        public UserModel Owner { get; set; }
+        public virtual UserModel Owner { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatório")]
+        [Required(ErrorMessage = "The ContactId is mandatory")]
         public long ContactUserId { get; set; }
-        public UserModel ContactUser { get; set; }
+        public virtual UserModel ContactUser { get; set; }
 
 
     }

@@ -2610,6 +2610,24 @@
           "bin/placeholder/Pitang.ONS.Treinamento.Repository.Impl.dll": {}
         }
       },
+      "Pitang.ONS.Treinamento.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Pitang.ONS.Treinamento.Entities": "1.0.0",
+          "Pitang.ONS.Treinamento.IRepository": "1.0.0",
+          "Pitang.ONS.Treinamento.IService": "1.0.0",
+          "Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pitang.ONS.Treinamento.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pitang.ONS.Treinamento.Services.dll": {}
+        }
+      },
       "Utils/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -8384,6 +8402,11 @@
       "path": "../Pitang.ONS.Treinamento.Repository/Pitang.ONS.Treinamento.Repository.Impl.csproj",
       "msbuildProject": "../Pitang.ONS.Treinamento.Repository/Pitang.ONS.Treinamento.Repository.Impl.csproj"
     },
+    "Pitang.ONS.Treinamento.Services/1.0.0": {
+      "type": "project",
+      "path": "../Pitang.ONS.Treinamento.Services/Pitang.ONS.Treinamento.Services.csproj",
+      "msbuildProject": "../Pitang.ONS.Treinamento.Services/Pitang.ONS.Treinamento.Services.csproj"
+    },
     "Utils/1.0.0": {
       "type": "project",
       "path": "../Utils/Utils.csproj",
@@ -8404,6 +8427,7 @@
       "Pitang.ONS.Treinamento.IRepository >= 1.0.0",
       "Pitang.ONS.Treinamento.IService >= 1.0.0",
       "Pitang.ONS.Treinamento.Repository.Impl >= 1.0.0",
+      "Pitang.ONS.Treinamento.Services >= 1.0.0",
       "Utils >= 1.0.0"
     ]
   },
@@ -8447,6 +8471,9 @@
             },
             "C:\\Users\\Pichau\\Desktop\\Rewrite\\Pitang.ONS.Treinamento.Repository\\Pitang.ONS.Treinamento.Repository.Impl.csproj": {
               "projectPath": "C:\\Users\\Pichau\\Desktop\\Rewrite\\Pitang.ONS.Treinamento.Repository\\Pitang.ONS.Treinamento.Repository.Impl.csproj"
+            },
+            "C:\\Users\\Pichau\\Desktop\\Rewrite\\Pitang.ONS.Treinamento.Services\\Pitang.ONS.Treinamento.Services.csproj": {
+              "projectPath": "C:\\Users\\Pichau\\Desktop\\Rewrite\\Pitang.ONS.Treinamento.Services\\Pitang.ONS.Treinamento.Services.csproj"
             },
             "C:\\Users\\Pichau\\Desktop\\Rewrite\\Utils\\Utils.csproj": {
               "projectPath": "C:\\Users\\Pichau\\Desktop\\Rewrite\\Utils\\Utils.csproj"

@@ -15,62 +15,64 @@ namespace Pitang.ONS.Treinamento.MessageApp.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        public IUserService userService;
-        private readonly IMapper mapper;
+        public IUserService _userService;
+        private readonly IMapper _mapper;
 
-        public UserController(IMapper mapperConstructor)
+        public UserController(IMapper mapperConstructor, IUserService userService)
         {
-            this.mapper = mapperConstructor;
+            _mapper = mapperConstructor;
+            _userService = userService;
         }
 
 
         [HttpGet]
         [Route ("")]
-        public async Task<ActionResult<List<UserDto>>> ListUsers() //usar 'async Task<>' / 'await'
+        public async Task<ActionResult<List<UserDtoOutput>>> ListUsers()
         {
-            List<UserModel> usersModel = await userService.ListUsers();
-            if(usersModel.Count == 0)
-                return NotFound(null);
+            var users = (await _userService.ListUsersAsync()).ToList();
 
-            List<UserDto> usersDto = mapper.Map<List<UserModel>, List<UserDto>>(usersModel);
+            if(users.Count() == 0 || users == null)
+                return NotFound("No user available");
+
+            List<UserDtoOutput> usersDto = _mapper.Map<List<UserModel>, List<UserDtoOutput>>(users.ToList());
 
             return Ok(usersDto);
         }
 
         [HttpPost]
         [Route ("")]
-        public async Task<ActionResult<UserDto>> AddUser(UserDto userDto)
+        public async Task<ActionResult<UserDtoOutput>> AddUser([FromBody] UserDtoInput userDtoInput)
         {
-            if(userDto == null)
+            if(userDtoInput == null)
             {
                 return NotFound("No user to add");
             }
-            UserModel user = mapper.Map<UserDto, UserModel>(userDto);
-            await userService.AddUser(user);
-            userDto = mapper.Map<UserModel, UserDto>(user);
+            UserModel user = _mapper.Map<UserDtoInput, UserModel>(userDtoInput);
+            await _userService.AddUserAsync(user);
+            var userDto = _mapper.Map<UserModel, UserDtoOutput>(user);
 
             return Ok(userDto);
         }
 
         [HttpPut]
         [Route("{id}")]
-        public ActionResult<UserDto> UpdateUser(long id, [FromBody] UserDto userDto)
+        public ActionResult<UserDtoOutput> UpdateUser(long id, [FromBody] UserDtoInput userDto)
         {
             if(userDto == null) { return NotFound("Nothing to update"); }
             userDto.Id = id;
-            UserModel user = mapper.Map<UserDto, UserModel>(userDto);
-            userService.UpdateUser(user);
-            userDto = mapper.Map<UserModel, UserDto>(user);
+            UserModel user = _mapper.Map<UserDtoInput, UserModel>(userDto);
+            _userService.UpdateUser(user);
+            var userDtoOutput = _mapper.Map<UserModel, UserDtoOutput>(user);
 
-            return Ok(userDto);
+            return Ok(userDtoOutput);
         }
 
         [HttpGet]
         [Route ("FindUserName/{UserName}")]
-        public async Task<ActionResult<UserDto>> FindByUserName(string UserName)
+        public ActionResult<UserDtoOutput> FindByUserName(string UserName)
         {
-            UserModel user = await userService.FindUserByUsername(UserName);
-            UserDto userDto = mapper.Map<UserModel, UserDto>(user);
+            UserModel user = _userService.FindUserByUsername(UserName);
+            UserDtoOutput userDto = _mapper.Map<UserModel, UserDtoOutput>(user);
 
             return Ok(userDto);
         }

@@ -9,18 +9,15 @@ namespace Pitang.ONS.Treinamento.IService
 {
 	public interface IUserService
 	{
-		Task<List<UserModel>> ListUsers();
-
-		Task<UserModel> FindUserById(long id);
-
-		Task<UserModel> FindUserByUsername(String userName);
-
-		Task<UserModel> FindUserByEmail(String email);
-
-		Task<UserModel> AddUser(UserModel user);
-
+		IEnumerable<UserModel> ListUsers();
+		Task<IEnumerable<UserModel>> ListUsersAsync();
+		UserModel FindUserById(long id);
+		Task<UserModel> FindUserByIdAsync(long id);
+		UserModel FindUserByUsername(string userName);
+		UserModel FindUserByEmail(string email);
+		UserModel AddUser(UserModel user);
+		Task<UserModel> AddUserAsync(UserModel user);
 		UserModel UpdateUser(UserModel user);
-
-		public void DeleteUser(long id);
+		UserModel DeleteUser(long id);
 	}
 }

@@ -11,10 +11,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Entities\Pitang.ONS.Treinamento.Entities.csproj" />
-    <ProjectReference Include="..\MessageApp\Pitang.ONS.Treinamento.MessageApp.csproj" />
     <ProjectReference Include="..\Pitang.ONS.Treinamento.IRepository\Pitang.ONS.Treinamento.IRepository.csproj" />
     <ProjectReference Include="..\Pitang.ONS.Treinamento.IService\Pitang.ONS.Treinamento.IService.csproj" />
-    <ProjectReference Include="..\Pitang.ONS.Treinamento.Repository\Pitang.ONS.Treinamento.Repository.Impl.csproj" />
     <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
 

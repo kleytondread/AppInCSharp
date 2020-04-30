@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Pitang.ONS.Treinamento.IRepository\Pitang.ONS.Treinamento.IRepository.csproj" />
     <ProjectReference Include="..\Pitang.ONS.Treinamento.IService\Pitang.ONS.Treinamento.IService.csproj" />
     <ProjectReference Include="..\Pitang.ONS.Treinamento.Repository\Pitang.ONS.Treinamento.Repository.Impl.csproj" />
+    <ProjectReference Include="..\Pitang.ONS.Treinamento.Services\Pitang.ONS.Treinamento.Services.csproj" />
     <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
 

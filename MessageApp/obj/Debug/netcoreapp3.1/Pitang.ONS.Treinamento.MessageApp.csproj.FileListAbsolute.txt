@@ -138,3 +138,5 @@ C:\Users\Pichau\Desktop\Rewrite\MessageApp\bin\Debug\netcoreapp3.1\Pitang.ONS.Tr
 C:\Users\Pichau\Desktop\Rewrite\MessageApp\obj\Debug\netcoreapp3.1\staticwebassets\Pitang.ONS.Treinamento.MessageApp.StaticWebAssets.Manifest.cache
 C:\Users\Pichau\Desktop\Rewrite\MessageApp\obj\Debug\netcoreapp3.1\staticwebassets\Pitang.ONS.Treinamento.MessageApp.StaticWebAssets.xml
 C:\Users\Pichau\Desktop\Rewrite\MessageApp\obj\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.MessageApp.genruntimeconfig.cache
+C:\Users\Pichau\Desktop\Rewrite\MessageApp\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Services.dll
+C:\Users\Pichau\Desktop\Rewrite\MessageApp\bin\Debug\netcoreapp3.1\Pitang.ONS.Treinamento.Services.pdb

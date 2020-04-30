@@ -8,6 +8,5 @@ namespace Pitang.ONS.Treinamento.Entities
     {
         public DateTime CreatedDate { get; set; }
         public DateTime LastUpdateDate { get; set; }
-        public bool IsDeleted { get; set; } 
     }
 }
